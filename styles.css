@@ -1,0 +1,125 @@
+/* ======== ESTILO GENERAL ======== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0d0d0d;
+  color: #ffffff;
+  margin: 0;
+  padding: 40px;
+}
+
+/* ======== CONTENEDOR PRINCIPAL ======== */
+#contacto {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+/* ======== TITULO ======== */
+#contacto h2 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 30px;
+  margin-bottom: 25px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+#contacto h2::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  background-color: #ff2e2e;
+  margin: 10px auto 0;
+}
+
+/* ======== FORMULARIO ======== */
+form {
+  flex: 1;
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+input, select, textarea {
+  width: 100%;
+  font-size: 18px;       /* Texto más grande */
+  padding: 15px;         /* Cuadros amplios */
+  margin-bottom: 20px;
+  background-color: #262626;
+  border: 1px solid #444;
+  color: #fff;
+  border-radius: 6px;
+}
+
+textarea {
+  min-height: 160px;     /* Área de mensaje amplia */
+  resize: vertical;
+}
+
+button {
+  background-color: #ff2e2e;
+  color: #fff;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: #e60000;
+}
+
+/* ======== INFORMACION DE CONTACTO ======== */
+.info-contacto {
+  flex: 1;
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.info-contacto h3 {
+  color: #ff2e2e;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.info-contacto p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+/* ======== REDES SOCIALES ======== */
+ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+ul li {
+  background-color: #262626;
+  text-align: center;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+ul a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+ul li:hover {
+  background-color: #ff2e2e;
+}
