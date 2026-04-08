@@ -1,0 +1,44 @@
+:root {
+    --primary: #E61919;
+    --secondary: #212121;
+    --neutral: #121212;
+    --white: #FFFFFF;
+    --soft-pink: #f2caca;
+    --gray-light: #d9d9d9;
+    --gray-medium: #a6a6a6;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--neutral);
+    color: var(--white);
+    line-height: 1.6;
+}
+
+#quienes-somos {
+    background-color: var(--secondary);
+    padding: 40px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    border: 1px solid var(--gray-medium);
+}
+
+section h2 {
+    font-size: 2.2rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+section h3 {
+    font-size: 1.4rem;
+    color: var(--soft-pink);
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 1rem;
+    color: var(--gray-light);
+    margin-bottom: 15px;
+    text-align: justify;
+}
