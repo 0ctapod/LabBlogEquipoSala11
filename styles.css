@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    height: 100vh;
+    
+    background-image: 
+        linear-gradient(to right, black 0%, rgba(0,0,0,0.8) 20%, transparent 60%), 
+        url("fondocarro.jpg.jpg"); 
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+
+    
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+}
+
+p {
+    padding-left: 50px;
+    color: rgb(244, 176, 49);
+    font-family: Cambria, Cochin, Georgia, serif; 
+    font-size: xx-large;
+    font-weight: 800;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.9);
+}
+
