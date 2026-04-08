@@ -1,3 +1,346 @@
+:root {
+    --primary: #E61919;
+    --secondary: #212121;
+    --neutral: #121212;
+    --white: #FFFFFF;
+    --soft-pink: #f2caca;
+    --gray-light: #d9d9d9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--neutral);
+    color: var(--white);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+#quienes-somos {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background-color: var(--secondary);
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.text {
+    flex: 1;
+}
+
+.text h2,
+.text h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.text h2 {
+    font-size: 2rem;
+}
+
+.text h3 {
+    font-size: 1.5rem;
+}
+
+.text p {
+    color: var(--gray-light);
+    text-align: justify;
+    font-size: 1rem;
+}
+
+.imagen {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.imagen img {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid var(--soft-pink);
+}
+
+
+@media (max-width: 768px) {
+    .about-box {
+        flex-direction: column;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    .imagen {
+        width: 100%;
+    }
+
+    .imagen img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+/* Variables para colores y tamaños que se usan en toda la página */
+:root {
+    --color-primary: #E61919; /* Rojo principal */
+    --color-secondary: #212121; /* Gris oscuro */
+    --color-tertiary: #FFFFFF; /* Blanco */
+    --color-neutral: #121212; /* Negro casi */
+    --navbar-height: 64px; /* Altura del navbar */
+}
+
+/* Estilos para el cuerpo de la página */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-neutral);
+    color: var(--color-tertiary);
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    height: var(--navbar-height);
+    background: #2a2a2a;
+    border-bottom: 1px solid #333;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    position: relative;
+}
+
+/* Contenedor del logo y título en el navbar */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Logo en el navbar */
+.navbar .logo {
+    height: 44px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Título en el navbar */
+.navbar .navbar-title {
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    letter-spacing: 0.02em;
+    margin: 0;
+}
+
+/* Botón hamburguesa para móviles */
+.nav-ham {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    gap: 5px;
+}
+
+/* Líneas del botón hamburguesa */
+.nav-ham span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin: 5px 0;
+    background: var(--color-tertiary);
+}
+
+/* Lista de enlaces en el navbar */
+.navbar .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para los enlaces en el navbar */
+.navbar .nav-links li a {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 14px;
+    color: var(--color-tertiary);
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+/* Hover para enlaces */
+.navbar .nav-links li a:hover {
+    background-color: rgba(230, 25, 25, 0.16);
+    color: var(--color-primary);
+}
+
+/* Último enlace (botón especial) */
+.navbar .nav-links li:last-child a {
+    background-color: var(--color-primary);
+    color: var(--color-tertiary);
+}
+
+/* Hover para el último enlace */
+.navbar .nav-links li:last-child a:hover {
+    background-color: #c91212;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 1024px) {
+    /* Cambiar navbar a columna */
+    .navbar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        padding: 12px 20px;
+        height: auto;
+    }
+
+    /* Logo container ancho completo */
+    .logo-container {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    /* Título más pequeño */
+    .navbar .navbar-title {
+        font-size: 1.4rem;
+    }
+
+    /* Mostrar botón hamburguesa */
+    .nav-ham {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Enlaces ocultos por defecto */
+    .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        margin: 0;
+        padding: 16px 18px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 18px;
+    }
+
+    /* Mostrar enlaces cuando navbar abierto */
+    .navbar.nav-open .nav-links {
+        display: flex; /* Mostrar */
+    }
+
+    /* Padding extra cuando abierto */
+    .navbar.nav-open {
+        padding-bottom: 18px;
+    }
+}
+
+/* Estilos para el footer */
+footer.site-footer {
+    padding: 36px 24px;
+    background: #181818;
+    border-top: 1px solid #333;
+    color: var(--color-tertiary);
+}
+
+/* Parte superior del footer */
+.footer-top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 48px;
+    flex-wrap: wrap;
+}
+
+/* Logo en el footer */
+.footer-logo {
+    width: 700px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Título en el footer */
+.footer-title {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--color-primary);
+}
+
+/* Lista de miembros en el footer */
+.footer-members ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+/* Elementos de la lista de miembros */
+.footer-members li {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.84);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+}
+
+/* Parte inferior del footer */
+.footer-bottom {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.74);
+}
+
+/* Media query para footer en pantallas pequeñas */
+@media (max-width: 1024px) {
+    .footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Margen inferior del footer */
+    .footer-bottom {
+        margin-top: 20px;
+    }
+}
 
 body {min-height: 100vh;
     background-image: 
