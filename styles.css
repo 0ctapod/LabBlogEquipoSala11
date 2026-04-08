@@ -1,3 +1,107 @@
+:root {
+    --primary: #E61919;
+    --secondary: #212121;
+    --neutral: #121212;
+    --white: #FFFFFF;
+    --soft-pink: #f2caca;
+    --gray-light: #d9d9d9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--neutral);
+    color: var(--white);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+#quienes-somos {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background-color: var(--secondary);
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.text {
+    flex: 1;
+}
+
+.text h2,
+.text h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.text h2 {
+    font-size: 2rem;
+}
+
+.text h3 {
+    font-size: 1.5rem;
+}
+
+.text p {
+    color: var(--gray-light);
+    text-align: justify;
+    font-size: 1rem;
+}
+
+.imagen {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.imagen img {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid var(--soft-pink);
+}
+
+
+@media (max-width: 768px) {
+    .about-box {
+        flex-direction: column;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    .imagen {
+        width: 100%;
+    }
+
+    .imagen img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
 
 /* Variables para colores y tamaños que se usan en toda la página */
 :root {
