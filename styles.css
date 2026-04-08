@@ -5,40 +5,100 @@
     --white: #FFFFFF;
     --soft-pink: #f2caca;
     --gray-light: #d9d9d9;
-    --gray-medium: #a6a6a6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
     background-color: var(--neutral);
     color: var(--white);
+    font-family: Arial, sans-serif;
     line-height: 1.6;
 }
 
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
 #quienes-somos {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
     background-color: var(--secondary);
-    padding: 40px;
+    padding: 30px;
     border-radius: 14px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
-    border: 1px solid var(--gray-medium);
 }
 
-section h2 {
-    font-size: 2.2rem;
+.text {
+    flex: 1;
+}
+
+.text h2,
+.text h3 {
     color: var(--primary);
-    margin-bottom: 20px;
-}
-
-section h3 {
-    font-size: 1.4rem;
-    color: var(--soft-pink);
-    margin-top: 25px;
-    margin-bottom: 10px;
-}
-
-section p {
-    font-size: 1rem;
-    color: var(--gray-light);
     margin-bottom: 15px;
-    text-align: justify;
 }
+
+.text h2 {
+    font-size: 2rem;
+}
+
+.text h3 {
+    font-size: 1.5rem;
+}
+
+.text p {
+    color: var(--gray-light);
+    text-align: justify;
+    font-size: 1rem;
+}
+
+.imagen {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.imagen img {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid var(--soft-pink);
+}
+
+
+@media (max-width: 768px) {
+    .about-box {
+        flex-direction: column;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    .imagen {
+        width: 100%;
+    }
+
+    .imagen img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
