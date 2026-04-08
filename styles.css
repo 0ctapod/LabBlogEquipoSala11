@@ -341,3 +341,82 @@ footer.site-footer {
         margin-top: 20px;
     }
 }
+
+body {min-height: 100vh;
+    background-image: 
+        linear-gradient(to right, black 0%, rgba(0,0,0,0.8) 25%, transparent 70%), 
+        url("Imagenes/fondocarro.jpg.jpg"); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: black;
+
+
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 50px;
+}
+
+.titulo-principal {
+    margin-top: 80px;
+    margin-bottom: 40px;
+    color: rgb(244, 176, 49);
+    font-family: Cambria, Georgia, serif; 
+    font-size: 3rem;
+    font-weight: 800;
+    text-shadow: 2px 2px 15px rgba(0,0,0,0.9);
+}
+
+.contenedor-descripciones {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.item-motor {
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    border-left: 4px solid rgb(244, 176, 49);
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 550px;
+    
+}
+
+.item-motor:hover {
+    transform: translateX(10px);
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.imagen-box img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+}
+
+.cuadro-texto {
+    padding: 15px 20px;
+}
+
+.cuadro-texto h3 {
+    color: rgb(244, 176, 49);
+    margin: 0;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.cuadro-texto p {
+
+    padding-left: 0 !important;
+    font-size: 1rem !important;
+    color: white !important;
+    margin-top: 5px !important;
+    font-weight: 400 !important;
+    text-shadow: none !important;
+}
