@@ -18,12 +18,16 @@ body {
     color: var(--white);
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    display: flex; /* Flexbox para estructura vertical */
+    flex-direction: column; /* Vertical */
+    min-height: 100vh; /* Mínimo alto de pantalla */
 }
 
 main {
     width: 90%;
     max-width: 1100px;
     margin: 40px auto;
+    flex: 1; /* Crecer para ocupar espacio disponible */
 }
 
 #quienes-somos {
@@ -112,13 +116,7 @@ main {
     --navbar-height: 64px; /* Altura del navbar */
 }
 
-/* Estilos para el cuerpo de la página */
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--color-neutral);
-    color: var(--color-tertiary);
-}
+
 
 /* Estilos para la barra de navegación */
 .navbar {
@@ -131,6 +129,7 @@ body {
     border-bottom: 1px solid #333;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
     position: relative;
+    width: 100%; /* Ocupar ancho completo */
 }
 
 /* Contenedor del logo y título en el navbar */
@@ -272,6 +271,8 @@ footer.site-footer {
     background: #181818;
     border-top: 1px solid #333;
     color: var(--color-tertiary);
+    width: 100%; /* Ocupar ancho completo */
+    margin-top: auto; /* Empujar al fondo */
 }
 
 /* Parte superior del footer */
@@ -420,3 +421,185 @@ body {min-height: 100vh;
     font-weight: 400 !important;
     text-shadow: none !important;
 }
+
+/* ========== ESTILOS PARA PÁGINA DE CONTACTO ========== */
+
+/* Sección principal de contacto */
+#Contacto {
+    max-width: 800px; /* Ancho máximo */
+    margin: 50px auto; /* Centrado y margen vertical */
+    padding: 40px; /* Espaciado interno */
+    background: rgba(30, 30, 30, 0.95); /* Fondo gris oscuro semi-transparente */
+    border-radius: 10px; /* Bordes redondeados */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
+    width: 90%; /* Responsive */
+}
+
+/* Título principal de contacto */
+#Contacto h2 {
+    color: var(--color-primary); /* Rojo */
+    font-size: 2.5rem; /* Tamaño grande */
+    margin-bottom: 30px; /* Espacio abajo */
+    text-align: center; /* Centrado */
+}
+
+/* Formulario de contacto */
+form {
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Vertical */
+    gap: 15px; /* Espacio entre campos */
+    margin-bottom: 40px; /* Espacio abajo */
+}
+
+/* Labels en el formulario */
+label {
+    color: var(--color-tertiary); /* Blanco */
+    font-weight: 600; /* Semi-negrita */
+    font-size: 1rem; /* Tamaño normal */
+    margin-bottom: 5px; /* Pequeño espacio */
+}
+
+/* Inputs de texto */
+input[type="text"],
+input[type="email"] {
+    padding: 12px; /* Espaciado interno */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borde claro */
+    border-radius: 5px; /* Bordes redondeados */
+    background: rgba(255, 255, 255, 0.05); /* Fondo semi-transparente */
+    color: var(--color-tertiary); /* Blanco */
+    font-size: 1rem; /* Tamaño fuente */
+    transition: all 200ms ease; /* Suavidad */
+}
+
+/* Hover en inputs */
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: var(--color-primary); /* Borde rojo */
+    background: rgba(255, 255, 255, 0.1); /* Fondo más visible */
+    outline: none; /* Sin borde azul */
+}
+
+/* Select (dropdown) */
+select {
+    padding: 12px; /* Espaciado interno */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borde claro */
+    border-radius: 5px; /* Bordes redondeados */
+    background: rgba(255, 255, 255, 0.05); /* Fondo semi-transparente */
+    color: var(--color-tertiary); /* Blanco */
+    font-size: 1rem; /* Tamaño fuente */
+    cursor: pointer; /* Mano */
+}
+
+/* Textarea para mensaje */
+textarea {
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--color-tertiary);
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    resize: vertical;
+    min-height: 120px;
+    transition: all 200ms ease;
+}
+
+/* Hover en textarea */
+textarea:focus {
+    border-color: var(--color-primary);
+    background: rgba(255, 255, 255, 0.1);
+    outline: none;
+}
+
+/* Botón de envío */
+button[type="submit"] {
+    padding: 14px 24px;
+    background: var(--color-primary);
+    color: var(--color-tertiary);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 200ms ease;
+    margin-top: 10px;
+}
+
+/* Hover en botón */
+button[type="submit"]:hover {
+    background: #c91212;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 25, 25, 0.4);
+}
+
+/* Información de contacto */
+#Contacto p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin: 12px 0;
+}
+
+/* Strong en información */
+#Contacto strong {
+    color: var(--color-primary);
+}
+
+/* Títulos h3 (Redes sociales) */
+#Contacto h3 {
+    color: var(--color-primary);
+    font-size: 1.8rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Lista de redes sociales */
+#Contacto ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Enlaces en redes sociales */
+#Contacto ul li a {
+    color: var(--color-tertiary);
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 200ms ease;
+    display: inline-block;
+}
+
+/* Hover en enlaces de redes */
+#Contacto ul li a:hover {
+    background: rgba(230, 25, 25, 0.2);
+    color: var(--color-primary);
+    padding-left: 20px;
+}
+
+/* Media query para contacto en pantallas pequeñas */
+@media (max-width: 1024px) {
+    #Contacto {
+        margin: 30px 15px;
+        padding: 25px;
+    }
+
+    #Contacto h2 {
+        font-size: 1.8rem;
+    }
+
+    #Contacto h3 {
+        font-size: 1.4rem;
+    }
+
+    #Contacto ul {
+        flex-direction: column;
+    }
+}
+
